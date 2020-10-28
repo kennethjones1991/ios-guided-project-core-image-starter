@@ -62,5 +62,7 @@
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>$(PRODUCT_NAME) needs access to your photo library to filter images</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>$(PRODUCT_NAME) needs access to your photo library to save filtered images</string>
 </dict>
 </plist>
