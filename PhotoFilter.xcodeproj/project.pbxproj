@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		61658BF825491E9C00FEFDC8 /* PhotoFilter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhotoFilter.entitlements; sourceTree = "<group>"; };
 		BD99071023957038009F7CDB /* PhotoFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD99071323957038009F7CDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD99071523957038009F7CDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +59,7 @@
 		BD99071223957038009F7CDB /* PhotoFilter */ = {
 			isa = PBXGroup;
 			children = (
+				61658BF825491E9C00FEFDC8 /* PhotoFilter.entitlements */,
 				BD99071323957038009F7CDB /* AppDelegate.swift */,
 				BD99071523957038009F7CDB /* SceneDelegate.swift */,
 				BD99072823957067009F7CDB /* Main.storyboard */,
@@ -280,6 +282,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PhotoFilter/PhotoFilter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = PhotoFilter/Info.plist;
@@ -289,6 +292,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lambdaschool.PhotoFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -298,6 +302,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PhotoFilter/PhotoFilter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = PhotoFilter/Info.plist;
@@ -307,6 +312,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lambdaschool.PhotoFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

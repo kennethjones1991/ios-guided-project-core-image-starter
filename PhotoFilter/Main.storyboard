@@ -84,8 +84,25 @@
                                                             </slider>
                                                         </subviews>
                                                     </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hM6-A8-2dE" userLabel="Blur Stack View">
+                                                        <rect key="frame" x="0.0" y="120.99999999999999" width="358" height="20.333333333333329"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Blur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzE-dz-GIf">
+                                                                <rect key="frame" x="0.0" y="0.0" width="30.333333333333332" height="20.333333333333332"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="cPC-n2-prf" userLabel="Blur Slider">
+                                                                <rect key="frame" x="36.333333333333343" y="0.0" width="323.66666666666663" height="21.333333333333332"/>
+                                                                <connections>
+                                                                    <action selector="blurChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="8Gb-kQ-kpk"/>
+                                                                </connections>
+                                                            </slider>
+                                                        </subviews>
+                                                    </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbg-Oj-7Ub">
-                                                        <rect key="frame" x="0.0" y="121" width="358" height="60"/>
+                                                        <rect key="frame" x="0.0" y="161.33333333333337" width="358" height="60"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="WX5-ha-JWa"/>
                                                         </constraints>
@@ -95,7 +112,7 @@
                                                         </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dn1-cb-8J9" userLabel="Spacer View">
-                                                        <rect key="frame" x="0.0" y="201" width="358" height="90"/>
+                                                        <rect key="frame" x="0.0" y="241.33333333333334" width="358" height="49.666666666666657"/>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
@@ -138,6 +155,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="blurSlider" destination="cPC-n2-prf" id="Qwt-kN-tF1"/>
                         <outlet property="brightnessSlider" destination="zDC-OB-nYX" id="NIW-M6-yfq"/>
                         <outlet property="contrastSlider" destination="fcb-mt-jU4" id="EST-ev-qrR"/>
                         <outlet property="imageView" destination="WLS-Nm-1BZ" id="kN0-JO-lMa"/>
