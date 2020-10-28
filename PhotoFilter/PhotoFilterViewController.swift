@@ -97,10 +97,31 @@ class PhotoFilterViewController: UIViewController {
 	}
 	
 	@IBAction func savePhotoButtonPressed(_ sender: UIButton) {
-		// TODO: Save to photo library
+		// Save to photo library
+        guard let originalImage = originalImage,
+              let originalCIImage = CIImage(image: originalImage),
+              let processedImage = image(byFiltering: originalCIImage)
+        else { return }
+        
+        PHPhotoLibrary.shared().performChanges {
+            PHAssetChangeRequest.creationRequestForAsset(from: processedImage)
+        } completionHandler: { (success, error) in
+            if let error = error {
+                print("Error saving photo: \(error)")
+            }
+            
+            DispatchQueue.main.async {
+                self.presentSuccessfulSaveAlert()
+            }
+        }
 	}
+    
+    private func presentSuccessfulSaveAlert() {
+        let alert = UIAlertController(title: "Photo Saved!", message: "The photo has been saved to your Photo Library!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
 	
-
 	// MARK: Slider events
 	
 	@IBAction func brightnessChanged(_ sender: UISlider) {
